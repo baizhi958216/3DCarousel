@@ -1,5 +1,7 @@
 # 3D 旋转木马 轮播图
 
+![example](./example.png)
+
 用法:
 
 ```html
