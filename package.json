@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-ts-starter",
+  "name": "3dcarousel",
   "version": "1.0.0",
-  "description": "Start A TypeScript Project With NodeJS",
+  "description": "A 3D Carousel",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "baizhi958216",
@@ -13,8 +13,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@types/node": "^20.10.4",
-    "nodemon": "^3.0.2",
+    "@types/node": "^20.10.5",
     "ts-node": "^10.9.2"
   }
 }
