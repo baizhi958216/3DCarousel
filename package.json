@@ -4,7 +4,7 @@
   "description": "A 3D Carousel",
   "main": "app.js",
   "scripts": {
-    "build": "tsc"
+    "build" : "tsc && esbuild --bundle dist/carousel.js --outdir=dist/min --minify --allow-overwrite"
   },
   "keywords": [],
   "author": "baizhi958216",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@types/node": "^20.10.5",
+    "esbuild": "^0.19.10",
     "ts-node": "^10.9.2"
   }
 }

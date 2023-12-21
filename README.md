@@ -25,3 +25,9 @@ initCarousel({
   handle: "#carousel",
 });
 ```
+
+编译:
+
+```cmd
+npm build
+```
