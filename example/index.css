@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(94, 94, 94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carousel {
+  width: 80%;
+  height: 70%;
+}
+.carousel-item {
+  width: 420px;
+  height: 300px;
+}
