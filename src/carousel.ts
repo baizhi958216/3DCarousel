@@ -7,7 +7,7 @@ type CarouselOptions = {
   speed?: number;
   itemClass: string;
   frontItemClass?: string;
-  handle: string;
+  handle: HTMLElement;
 };
 
 class CarouselItem {
@@ -178,8 +178,8 @@ class Carousel {
 
   finishInit = (): void => {
     clearInterval(this.initTimer);
-    const itemClasses = this.element.querySelectorAll(
-      `.${this.options.itemClass}`
+    const itemClasses = this.element.getElementsByClassName(
+      `${this.options.itemClass}`
     );
 
     for (let i = 0; i < itemClasses.length; i++) {
@@ -198,20 +198,11 @@ const initCarousel = (
   options: CarouselOptions = {
     farScale: 0.5,
     speed: 4,
-    itemClass: "carousel",
-    handle: "carousel-item",
+    itemClass: "carousel-item",
+    handle: document.getElementById("carousel")!,
   }
 ): void => {
-  if (!document.querySelector(options.handle)) {
-    throw Error("未找到挂载点 无法新建实例");
-    return;
-  }
-  new Carousel(document.querySelector(options.handle)!, options);
+  new Carousel(options.handle, options);
 };
 
-export {
-  Carousel,
-  CarouselItem,
-  initCarousel,
-  CarouselOptions,
-}
+export { Carousel, CarouselItem, initCarousel, CarouselOptions };

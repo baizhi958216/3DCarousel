@@ -16,15 +16,15 @@
       <div class="carousel-item" style="background-color: rgba(255, 127, 249, 0.3)"></div>
     </div>
   </div>
-  <script src="./carousel.js"></script>
-  <script>
+  <script type="module">
+    import { initCarousel } from './carousel.js'
     initCarousel({
       xRadius: 350,
       yRadius: 35,
       farScale: 0.7,
       speed: 4,
       itemClass: "carousel-item",
-      handle: "#carousel",
+      handle: document.getElementById('carousel'),
     });
   </script>
 </body>
