@@ -17,4 +17,5 @@
 .carousel-item {
   width: 420px;
   height: 300px;
+  opacity: .9;
 }

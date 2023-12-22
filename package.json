@@ -1,6 +1,6 @@
 {
   "name": "carouselable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A 3D Carousel",
   "main": "./index.js",
   "types": "./types/index.d.ts",
@@ -16,6 +16,11 @@
   "scripts": {
     "build" : "tsc && esbuild --bundle dist/carousel.js --outfile=dist/carousel.min.js --minify --allow-overwrite"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baizhi958216/3DCarousel.git"
+  },
+  "homepage": "https://github.com/baizhi958216/3DCarousel.git",
   "keywords": [],
   "author": "baizhi958216",
   "license": "MIT",

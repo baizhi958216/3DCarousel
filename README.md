@@ -1,8 +1,10 @@
 # 3D 旋转木马 轮播图
 
-![example](./example.png)
+![example](https://raw.githubusercontent.com/baizhi958216/3DCarousel/main/example.png)
 
-用法:
+![example](https://raw.githubusercontent.com/baizhi958216/3DCarousel/main/example.gif)
+
+## 用法:
 
 Vanilla:
 
@@ -75,10 +77,10 @@ onMounted(() => {
 </template>
 ```
 
-编译:
+## 编译:
 
 ```cmd
 npm build
 ```
 
-如果你正在编译`Vanilla`, 请在`tsconfig.json`中将`"module": "CommonJS"`进行注释掉。
+如果你正在编译`Vanilla`, 请在`tsconfig.json`中将`"module": "CommonJS"`注释掉。
