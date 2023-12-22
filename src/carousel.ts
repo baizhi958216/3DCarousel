@@ -1,3 +1,15 @@
+type CarouselOptions = {
+  xOrigin?: number;
+  yOrigin?: number;
+  xRadius?: number;
+  yRadius?: number;
+  farScale?: number;
+  speed?: number;
+  itemClass: string;
+  frontItemClass?: string;
+  handle: string;
+};
+
 class CarouselItem {
   element: HTMLElement;
   fullWidth: number;
@@ -181,21 +193,25 @@ class Carousel {
     }
   };
 }
-const initCarousel = (options: any): void => {
-  options = Object.assign(
-    {
-      xOrigin: null,
-      yOrigin: null,
-      xRadius: null,
-      yRadius: null,
-      farScale: 0.5,
-      speed: 4,
-      itemClass: "carousel-item",
-      frontItemClass: null,
-      handle: "carousel",
-    },
-    options
-  );
 
-  new Carousel(document.querySelector(options.handle), options);
+const initCarousel = (
+  options: CarouselOptions = {
+    farScale: 0.5,
+    speed: 4,
+    itemClass: "carousel",
+    handle: "carousel-item",
+  }
+): void => {
+  if (!document.querySelector(options.handle)) {
+    throw Error("未找到挂载点 无法新建实例");
+    return;
+  }
+  new Carousel(document.querySelector(options.handle)!, options);
 };
+
+export {
+  Carousel,
+  CarouselItem,
+  initCarousel,
+  CarouselOptions,
+}

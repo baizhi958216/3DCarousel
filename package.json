@@ -1,10 +1,19 @@
 {
-  "name": "3dcarousel",
-  "version": "1.0.0",
+  "name": "carouselable",
+  "version": "0.0.1",
   "description": "A 3D Carousel",
-  "main": "app.js",
+  "main": "./dist/carousel.min.js",
+  "types": "./src/carousel.d.ts",
+  "files": [
+    "./dist",
+    "./src/carousel.d.ts",
+    "./LICENSE",
+    "./package.json",
+    "./tsconfig.json",
+    "./README.md"
+  ],
   "scripts": {
-    "build" : "tsc && esbuild --bundle dist/carousel.js --outdir=dist/min --minify --allow-overwrite"
+    "build" : "tsc && esbuild --bundle dist/carousel.js --outfile=dist/carousel.min.js --minify --allow-overwrite"
   },
   "keywords": [],
   "author": "baizhi958216",
