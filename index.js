@@ -1,6 +1,6 @@
 'use strict';
 
-const carousel = require('./dist/carousel.min.js');
+const carousel = require('./dist/carousel.js');
 module.exports = carousel
 module.exports.default = carousel;
 module.exports.carousel = carousel;

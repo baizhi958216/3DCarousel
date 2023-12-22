@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.initCarousel = exports.CarouselItem = exports.Carousel = void 0;
 class CarouselItem {
     element;
     fullWidth;
@@ -13,6 +16,7 @@ class CarouselItem {
         this.element.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
     }
 }
+exports.CarouselItem = CarouselItem;
 class Carousel {
     element;
     options;
@@ -142,6 +146,7 @@ class Carousel {
         }
     };
 }
+exports.Carousel = Carousel;
 const initCarousel = (options = {
     farScale: 0.5,
     speed: 4,
@@ -150,4 +155,4 @@ const initCarousel = (options = {
 }) => {
     new Carousel(options.handle, options);
 };
-export { Carousel, CarouselItem, initCarousel };
+exports.initCarousel = initCarousel;

@@ -1,36 +1,3 @@
-# 3D 旋转木马 轮播图
-
-![example](./example.png)
-
-用法:
-
-Vanilla:
-
-```html
-<body>
-  <div id="carousel">
-    <div class="carousel-item"></div>
-    <div class="carousel-item"></div>
-    <div class="carousel-item"></div>
-  </div>
-</body>
-
-<script type="module">
-  import { initCarousel } from "./carousel.js";
-  initCarousel({
-    xRadius: 350,
-    yRadius: 35,
-    farScale: 0.7,
-    speed: 4,
-    itemClass: "carousel-item",
-    handle: document.getElementById("carousel"),
-  });
-</script>
-```
-
-VueJS:
-
-```vue
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { initCarousel } from "carouselable";
@@ -73,12 +40,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-```
-
-编译:
-
-```cmd
-npm build
-```
-
-如果你正在编译`Vanilla`, 请在`tsconfig.json`中将`"module": "CommonJS"`进行注释掉。
